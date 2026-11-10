@@ -51,9 +51,10 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- TODO: fill in the paper / arXiv links. -->
+              <!-- TODO: fill in the arXiv link. -->
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark" disabled>
+                <a href="./static/pdfs/field2sim_wacv2027.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
@@ -118,8 +119,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <!-- TODO: paste the paper abstract. -->
-            Abstract coming soon.
+            Realistic, semantically annotated plant models are essential for evaluating
+            agricultural robot perception and view planning under representative visual
+            conditions in simulation, but creating such assets from real crops remains difficult.
+            Existing approaches often trade annotation quality for visual realism or require
+            specialized capture equipment. We introduce <b>Field2Sim</b>, a modular pipeline that
+            converts handheld smartphone images of crop rows into photorealistic Gaussian
+            Splatting reconstructions with separated plants and individually identified fruits.
+            Field2Sim selects its reconstruction backbone based on downstream fruit-segmentation
+            performance, transfers 2D semantic masks into 3D without additional segmentation
+            training, and introduces a novel two-pass fruit-instance identification method that
+            refines geometric clusters using multi-view 2D instance evidence. We evaluate
+            Field2Sim on five capsicum rows in a commercial greenhouse containing 1,722 annotated
+            fruits, where the two-pass method achieves a 3D panoptic quality of 0.954, compared
+            with 0.808 for geometric clustering alone, and reduces fruit-count error from 20.0%
+            to 1.5%. We publicly release a dataset of the five reconstructions with their plant
+            and fruit annotations, together with our code, to support simulation-based research
+            on agricultural robot perception and view planning.
           </p>
         </div>
       </div>
@@ -194,6 +210,9 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
+      <a class="icon-link" href="./static/pdfs/field2sim_wacv2027.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
       <a class="icon-link" href="https://github.com/dtabaa/field2sim">
         <i class="fab fa-github"></i>
       </a>
